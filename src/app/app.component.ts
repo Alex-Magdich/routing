@@ -12,7 +12,5 @@ export class AppComponent {
   constructor(private router: Router) {
    
   }
-  gotoAbout(id){
-    this.router.navigate(['about',id]);
-  }
+ 
 }
