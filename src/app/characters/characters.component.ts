@@ -8,7 +8,7 @@ import { PotterService} from '../potter.service';
   styleUrls: ['./characters.component.css']
 })
 export class CharactersComponent implements OnInit {
-
+characters: [];
   constructor(private potterService:PotterService) { }
 
   ngOnInit() {
@@ -16,7 +16,7 @@ export class CharactersComponent implements OnInit {
   }
 
   showCharacters(){
-    this.potterService.getCharacters().subscribe(characters => console.log(characters));
+    this.potterService.getCharacters().subscribe(characters => this.characters=characters);
   }
 
 }
